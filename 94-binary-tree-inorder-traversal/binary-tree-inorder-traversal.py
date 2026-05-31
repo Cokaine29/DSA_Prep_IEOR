@@ -13,6 +13,7 @@ class Solution:
 
         while curr or stack :
             while curr :
+                
                 stack.append(curr)
                 curr = curr.left
             curr = stack.pop()
