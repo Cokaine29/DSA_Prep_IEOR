@@ -36,7 +36,7 @@ class Solution:
                 return -1 
             if abs(lh - rh) > 1 :
                 return -1 
-            return max(dfsHeight(root.right),dfsHeight(root.left)) + 1 
+            return max(lh,rh) + 1 
 
         return False if dfsHeight(root) == -1 else True
 
