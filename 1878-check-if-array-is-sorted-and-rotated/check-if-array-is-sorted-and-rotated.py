@@ -27,11 +27,11 @@ class Solution:
         if L == 1 :
             return True
         count = 0 
-        new = nums[:] + nums[:]
+        # new = nums[:] + nums[:]
         i = 0 
         j = 1 
         while i < 2*L and j < 2*L:
-            while j < 2*L and new[j] >= new[j-1] :
+            while j < 2*L and nums[j % L] >= nums[(j-1) % L] :
                 j += 1 
             if j - i >= L :
                 return True
