@@ -1,6 +1,6 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-
+        ## Approach 1 
         d = {}
 
         for i in range(len(nums)) :
@@ -9,4 +9,5 @@ class Solution:
             else :
                 d[target - nums[i]] = i 
         return -1 
+
         
