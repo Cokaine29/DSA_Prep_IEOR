@@ -25,12 +25,11 @@ class Solution:
         if not head or not head.next :
             return head 
         rev = self.reverseList(head.next)
+        front = head.next
+        front.next = head
+
         head.next = None
         
-        curr = rev
-        while curr.next :
-            curr = curr.next 
-        curr.next = head
 
         return rev
 
