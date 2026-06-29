@@ -23,14 +23,8 @@ class Solution:
         #     j += 1
         
 
-        ## Approach 2 
+        ## Approach 2  : O(m+n) without any extra space
 
-        # if m == 0 and n > 0 :
-        #     for i in range(n) :
-        #         nums1[i] = nums2[i]
-        #     return 
-        # elif n == 0 :
-        #     return  
         i = m - 1
         j = n - 1 
         k = m + n - 1
