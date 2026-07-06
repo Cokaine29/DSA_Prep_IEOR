@@ -31,12 +31,11 @@ class Solution:
             return 1 
 
         s = set(nums)
-        # start = nums[0]
+        
         count = 1
         ans = 1
         for ele in s :
             if ele - 1 not in s :
-                # start = ele
                 count = 1 
                 while ele + 1 in s :
                     count += 1 
