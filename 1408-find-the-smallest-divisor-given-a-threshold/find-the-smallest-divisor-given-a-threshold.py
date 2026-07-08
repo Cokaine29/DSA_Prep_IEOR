@@ -4,23 +4,17 @@ class Solution:
 
         l = 1 
         r = max(nums) 
-        s = 0 
-
+        ans = max(nums)
         while l <= r :
             mid = (l+r) // 2
             count = 0 
             for ele in nums :
                 count += math.ceil(ele/mid)
-            s = min(s,count)
-
             if count > threshold : 
                 l = mid + 1
             else :
+                ans = mid
                 r = mid - 1
-
-        print([l,r])
-
-        return l
-
+        return ans
 
 
