@@ -20,16 +20,23 @@ class Solution:
             "CD": 400,
             "CM": 900,
         }
-        i = 0 
-        while i < len(s) :
-            if i + 1 < len(s) and s[i:i+2] in d:
+        # i = 0 
+        # while i < len(s) :
+        #     if i + 1 < len(s) and s[i:i+2] in d:
                  
-                count += d[s[i:i+2]] 
-                i += 2 
+        #         count += d[s[i:i+2]] 
+        #         i += 2 
+        #     else :
+        #         count += d[s[i]]
+        #         i += 1 
+        # return count
+
+        for i in range(len(s)-1) :
+            if d[s[i]] < d[s[i+1]] :
+                count -= d[s[i]]
             else :
-                count += d[s[i]]
-                i += 1 
-        return count
+                count += d[s[i]] 
+        return count + d[s[-1]]
             
 
 
