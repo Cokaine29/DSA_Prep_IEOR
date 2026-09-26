@@ -12,19 +12,35 @@ class Solution:
         # return [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
 
 
-        stack = []
-        res = []
-        stack.append(root)
+        # stack = []
+        # res = []
+        # stack.append(root)
 
-        while stack :
-            node = stack.pop()
-            if node :
-                res.append(node.val)
-            if node and node.right :
-                stack.append(node.right)
-            if node and node.left :
-                stack.append(node.left)
+        # while stack :
+        #     node = stack.pop()
+        #     if node :
+        #         res.append(node.val)
+        #     if node and node.right :
+        #         stack.append(node.right)
+        #     if node and node.left :
+        #         stack.append(node.left)
+        # return res
+
+
+        res = []
+        
+        def preorder(root) :
+            if not root :
+                return 
+            res.append(root.val)
+            preorder(root.left)
+            preorder(root.right)
+            
+            return 
+        preorder(root)
         return res
+
+        
 
 
 
