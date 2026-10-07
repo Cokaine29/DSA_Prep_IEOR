@@ -1,10 +1,18 @@
 class Solution:
     def fib(self, n: int) -> int:
-        if n == 0 :
-            return 0 
-        elif n == 1 :
-            return 1 
 
-        else :
-            return self.fib(n-1) + self.fib(n-2)
+        dp = {}
+
+        def fun(n) :
+            if n == 0 or n == 1 :
+                return n 
+            if n in dp :
+                return dp[n]
+            else :
+                ans = fun(n-1) + fun(n-2)
+                dp[n] = ans
+                return ans
+
+        return fun(n)
+
         
